@@ -1,0 +1,5 @@
+PROPOSALFORGE AI — SAMPLE LICENSE
+
+The original source code and original written materials in this package may be used according to the commercial license purchased from the seller. The buyer may not resell or redistribute the unmodified package as a competing product.
+
+Third-party trademarks, AI services, libraries, fonts, images and other third-party assets remain subject to their respective licenses. This sample license grants no rights to third-party assets.

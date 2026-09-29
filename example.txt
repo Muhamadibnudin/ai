@@ -1,0 +1,4 @@
+JOB: Need a Laravel developer to fix authentication and improve an admin dashboard.
+SKILLS: Laravel, PHP, MySQL, JavaScript
+
+Use the app to generate a prompt, then paste it into your preferred AI assistant. Review every factual claim before sending the final proposal.

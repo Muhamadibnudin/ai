@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="AI People Search & Public Information Finder">
+  <title>AI People Search & Public Information Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="brand-mark">AI</span><div><strong>People Search</strong><small>Public Information Finder</small></div></div>
+  <button id="themeBtn" class="icon-btn" title="Toggle theme">☾</button>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow">PUBLIC WEB RESEARCH</div>
+    <h1>Find publicly available information.</h1>
+    <p>Search names, usernames, companies and keywords, then organize public sources into one report.</p>
+    <form id="searchForm" class="search-box">
+      <input id="query" autocomplete="off" placeholder="Enter name, username, company or keyword..." required>
+      <button type="submit">🔍 SEARCH</button>
+    </form>
+    <div class="modes">
+      <label><input type="radio" name="mode" value="broad" checked> Broad</label>
+      <label><input type="radio" name="mode" value="exact"> Exact name</label>
+      <label><input type="radio" name="mode" value="news"> News</label>
+      <label><input type="radio" name="mode" value="social"> Social</label>
+      <label><input type="radio" name="mode" value="profiles"> Profiles</label>
+      <label><input type="radio" name="mode" value="web"> Websites</label>
+    </div>
+  </section>
+
+  <section id="status" class="status hidden"></section>
+
+  <section id="results" class="hidden">
+    <div class="result-head">
+      <div><div class="eyebrow">SEARCH REPORT</div><h2 id="resultTitle"></h2><p id="foundAt"></p></div>
+      <div class="actions">
+        <button id="exportHtml" class="secondary">HTML</button>
+        <button id="exportJson" class="secondary">JSON</button>
+        <button id="exportTxt" class="secondary">TXT</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <article class="card summary-card">
+        <div class="card-title">🤖 AI SUMMARY</div>
+        <div id="summary"></div>
+      </article>
+      <article class="card">
+        <div class="card-title">🛡️ SOURCE CONFIDENCE</div>
+        <div class="score"><span id="score">0</span><small>/ 100</small></div>
+        <p class="muted">Quality of the gathered public sources, not a rating of the person.</p>
+      </article>
+    </div>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="social">Social</button>
+      <button class="tab" data-tab="news">News</button>
+      <button class="tab" data-tab="profiles">Profiles</button>
+      <button class="tab" data-tab="contacts">Public Contact</button>
+      <button class="tab" data-tab="sources">Sources</button>
+      <button class="tab" data-tab="timeline">Timeline</button>
+    </nav>
+
+    <div id="tab-overview" class="tab-panel active"></div>
+    <div id="tab-social" class="tab-panel"></div>
+    <div id="tab-news" class="tab-panel"></div>
+    <div id="tab-profiles" class="tab-panel"></div>
+    <div id="tab-contacts" class="tab-panel"></div>
+    <div id="tab-sources" class="tab-panel"></div>
+    <div id="tab-timeline" class="tab-panel"></div>
+  </section>
+
+  <section class="card privacy-note">
+    <div class="card-title">🔒 PRIVACY</div>
+    <p>This tool collects and displays publicly available information only. It does not search leaked databases, private accounts, passwords, private home addresses, private phone numbers, or bypass authentication/CAPTCHA. Matching a name to an account is always presented as a possibility, not proof of identity.</p>
+  </section>
+
+  <section class="card history-card">
+    <div class="card-title">🕘 RECENT SEARCHES <button id="clearHistory" class="link-btn">Clear</button></div>
+    <div id="history"></div>
+  </section>
+</main>
+
+<footer>AI People Search • Public information research tool • Verify important information at the original source.</footer>
+<script src="script.js"></script>
+</body>
+</html>
